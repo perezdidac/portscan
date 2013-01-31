@@ -1,0 +1,62 @@
+.TH PORTSCAN "1" "January 2010"
+.SH NAME
+portscan \- scans TCP/IP ports of a target
+.SH SYNOPSIS
+.B portscan
+[OPTION\fR]...
+.SH DESCRIPTION
+.PP
+Scans a desired range of TCP/IP ports to a remote machine and shows the
+results. The program can use multiple number of sub-processes working
+together to optimize the time of application.
+.TP
+\fB\-l\fR
+log filename
+.TP
+\fB\-d\fR
+remote hostname
+.TP
+\fB\-s\fR
+initial port for start scanning
+.TP
+\fB\-e\fR
+end port
+.TP
+\fB\-c\fR
+max number of childs
+.TP
+\fB\-h\fR
+display the usage of the program
+.TP
+\fB\-v\fR
+output version information and exit
+.PP
+By default, the program uses 8 childs at maximum.
+If \fB\-d\fR option is not used, portscan reads hostnames from the standard input.
+.SS "Exit status:"
+.TP
+0
+if OK,
+.TP
+1
+if nothing was done,
+.TP
+2
+if an error occour,
+.TP
+3
+if the application has been cancelled during the scan process
+.SH AUTHOR
+Written by A. Hernández and D. Pérez.
+.SH "REPORTING BUGS"
+Report portscan bugs to perez.didac@gmail.com or aitorhdez@gmail.com.
+.SH COPYRIGHT
+Copyright \(co 2009 Universitat Politècnica de Catalunya.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH "COMMENTS"
+This program was developed as a Arquitectura de Computadors i Sistemes Operatius II
+project at Universitat Politècnica de Barcelona (UPC).
+
+We want to thank Javier Martínez for being our mate.
